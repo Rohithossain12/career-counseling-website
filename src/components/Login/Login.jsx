@@ -4,15 +4,28 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
-  const { loginWithGoogle } = useContext(AuthContext);
+  const { loginWithGoogle, LoginUser } = useContext(AuthContext);
 
   const handleGoogleLogin = () => {
     loginWithGoogle();
   };
 
+  const handleLogin =(event)=>{
+  event.preventDefault();
+  const email =event.target.email.value;
+  const password =event.target.password.value
+  LoginUser(email,password)
+  .then(result =>{
+  console.log(result.user)  
+  .catch(error =>{
+  console.log("Error",error)  
+  })
+  })
+  }
+
   return (
     <div className="card bg-base-200  max-w-lg mx-auto shrink-0  mt-10 mb-10">
-      <form className="card-body ">
+      <form onSubmit={handleLogin} className="card-body ">
         <h1 className=" text-xl md:text-2xl lg:text-3xl font-semibold ">
           Login Now
         </h1>
@@ -23,6 +36,7 @@ const Login = () => {
           <input
             type="email"
             placeholder="email"
+            name="email"
             className="input input-bordered"
             required
           />
@@ -34,6 +48,7 @@ const Login = () => {
           <input
             type="password"
             placeholder="password"
+            name="password"
             className="input input-bordered"
             required
           />

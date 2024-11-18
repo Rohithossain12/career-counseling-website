@@ -4,15 +4,28 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Register = () => {
-  const { loginWithGoogle } = useContext(AuthContext);
+  const { loginWithGoogle, createUser } = useContext(AuthContext);
 
   const handleGoogleLogin = () => {
     loginWithGoogle();
   };
 
+  const handleRegister = (event) => {
+    event.preventDefault();
+
+    const name = event.target.name.value;
+    const photo = event.target.photo.value;
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    createUser(email, password)
+    .then(result =>{
+     console.log(result.user) 
+    })
+  };
+
   return (
     <div className="card bg-base-200  max-w-lg mx-auto shrink-0  mt-10 mb-10">
-      <form className="card-body ">
+      <form onSubmit={handleRegister} className="card-body ">
         <h1 className=" text-xl md:text-2xl lg:text-3xl font-semibold ">
           Register Now
         </h1>
@@ -66,7 +79,7 @@ const Register = () => {
           <label className="label"></label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary font-bold">Login</button>
+          <button className="btn btn-primary font-bold">Register</button>
         </div>
       </form>
       <p className="text-center font-bold">Or</p>

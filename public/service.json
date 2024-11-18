@@ -1,0 +1,113 @@
+[
+    {
+      "id": 1,
+      "image": "https://i.ibb.co.com/J78kz5Y/istockphoto-1406921267-612x612-1.jpg",
+      "serviceName": "Career Counseling Session",
+      "category": "online",
+      "description": "One-on-one session to explore career options and strategies.",
+      "pricing": "$50 per hour",
+      "duration": "05-12-24 5-6pm",
+      "counselor": "John Doe",
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "image": "https://i.ibb.co.com/DKwv2vY/copy.jpg",
+      "serviceName": "Resume Review",
+      "category": "offline",
+      "description": "Detailed analysis of your resume with actionable feedback.",
+      "pricing": "$30 per review",
+      "duration": "06-12-24 3-4pm",
+      "counselor": "Jane Smith",
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "image": "https://i.ibb.co.com/Fz289Pk/careerchoiceclassroom-hero-2000x1125.jpg",
+      "serviceName": "Interview Preparation",
+      "category": "group",
+      "description": "Mock interview sessions with tips and feedback.",
+      "pricing": "$40 per session",
+      "duration": "07-12-24 2-3pm",
+      "counselor": "Michael Brown",
+      "rating": 4.9
+    },
+    {
+      "id": 4,
+      "image": "https://i.ibb.co.com/hDSBDwg/5767946.jpg",
+      "serviceName": "Skill Assessment",
+      "category": "online",
+      "description": "Test to identify strengths and areas of improvement.",
+      "pricing": "$25 per test",
+      "duration": "08-12-24 10-11am",
+      "counselor": "Emily Davis",
+      "rating": 4.6
+    },
+    {
+      "id": 5,
+      "image": "https://i.ibb.co.com/wZqYW7W/41ab5c8f4046151e914905924f539b82.jpg",
+      "serviceName": "College Selection Guidance",
+      "category": "online",
+      "description": "Assistance in selecting the best college for your goals.",
+      "pricing": "$70 per session",
+      "duration": "09-12-24 4-5pm",
+      "counselor": "Chris Johnson",
+      "rating": 4.7
+    },
+    {
+      "id": 6,
+      "image": "https://i.ibb.co.com/JcNPGKD/1690638297937.jpg",
+      "serviceName": "Career Change Consultation",
+      "category": "offline",
+      "description": "Guidance for professionals looking to switch careers.",
+      "pricing": "$60 per session",
+      "duration": "10-12-24 1-2pm",
+      "counselor": "Sarah Lee",
+      "rating": 4.9
+    },
+    {
+      "id": 7,
+      "image": "https://i.ibb.co.com/v1pwmvY/321-3211028-offline-counselling-counselling-psychotherapy.jpg",
+      "serviceName": "Internship Search Assistance",
+      "category": "online",
+      "description": "Help finding and applying for internships.",
+      "pricing": "$40 per session",
+      "duration": "11-12-24 11-12pm",
+      "counselor": "Paul Walker",
+      "rating": 4.8
+    },
+    {
+      "id": 8,
+      "image": "https://i.ibb.co.com/2SfCfhZ/1568770097913.jpg",
+      "serviceName": "Scholarship Guidance",
+      "category": "group",
+      "description": "Learn how to find and apply for scholarships effectively.",
+      "pricing": "$30 per session",
+      "duration": "12-12-24 2-3pm",
+      "counselor": "Laura Wilson",
+      "rating": 4.7
+    },
+    {
+      "id": 9,
+      "image": "https://i.ibb.co.com/stDPynt/Career-Counselling-After-12th-1024x576.jpg",
+      "serviceName": "LinkedIn Profile Optimization",
+      "category": "online",
+      "description": "Tips to enhance your LinkedIn presence for recruiters.",
+      "pricing": "$35 per session",
+      "duration": "13-12-24 6-7pm",
+      "counselor": "David Martinez",
+      "rating": 4.8
+    },
+    {
+      "id": 10,
+      "image": "https://i.ibb.co.com/QjwRfzr/education-consultant-500x500.webp",
+      "serviceName": "Entrepreneurship Mentoring",
+      "category": "offline",
+      "description": "Guidance to start and manage your business.",
+      "pricing": "$100 per session",
+      "duration": "14-12-24 12-1pm",
+      "counselor": "Sophia Taylor",
+      "rating": 5.0
+    }
+  ]
+  

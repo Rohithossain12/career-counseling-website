@@ -12,7 +12,7 @@ const links =<div className="flex gap-5 font-bold ">
 </div>
 
   return (
-    <div className="bg-base-200">
+    <div className="">
       <div className="navbar container mx-auto  py-2">
         <div className="navbar-start">
           <div className="dropdown">

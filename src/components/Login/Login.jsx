@@ -4,24 +4,25 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
-  const { loginWithGoogle, LoginUser } = useContext(AuthContext);
+  const { loginWithGoogle, LoginUser, setUser } = useContext(AuthContext);
 
   const handleGoogleLogin = () => {
     loginWithGoogle();
   };
 
-  const handleLogin =(event)=>{
-  event.preventDefault();
-  const email =event.target.email.value;
-  const password =event.target.password.value
-  LoginUser(email,password)
-  .then(result =>{
-  console.log(result.user)  
-  .catch(error =>{
-  console.log("Error",error)  
-  })
-  })
-  }
+  const handleLogin = (event) => {
+    event.preventDefault();
+    const email = event.target.email.value;
+    const password = event.target.password.value;
+    LoginUser(email, password).then((result) => {
+      const user = result.user;
+      setUser(user);
+    })
+    .catch(error =>{
+   alert(error.message)
+
+    })
+  };
 
   return (
     <div className="card bg-base-200  max-w-lg mx-auto shrink-0  mt-10 mb-10">

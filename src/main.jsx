@@ -12,6 +12,7 @@ import AuthProvider from "./Provider/AuthProvider";
 import Banner from "./components/Banner/Banner";
 import AllService from "./components/AllService/AllService";
 import ServiceDetails from "./Pages/ServiceDetails/ServiceDetails";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
 
       {
         path: "/serviceDetails/:id",
-        element: <ServiceDetails></ServiceDetails>,
+        element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
         loader: async ({ params }) => {
           const response = await fetch("/service.json");
           const services = await response.json();

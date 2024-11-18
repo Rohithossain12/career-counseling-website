@@ -1,8 +1,11 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
+import { FaRegUserCircle } from "react-icons/fa";
 
 
 const Header = () => {   
+const {user,logout}=useContext(AuthContext);  
 
 const links =<div className="flex gap-5 font-bold ">
 <NavLink to="/">Home</NavLink>
@@ -39,15 +42,22 @@ const links =<div className="flex gap-5 font-bold ">
             {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">daisyUI</a>
+          <a className="btn btn-ghost text-xl">ROHIT</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
            {links}
           </ul>
         </div>
-        <div className="navbar-end">
-          <Link to="/login" className="btn btn-primary">Login</Link>
+        <div className="navbar-end flex gap-3">
+         {
+          user ? <p>img</p>  : <p><FaRegUserCircle size={40} /></p>
+         }
+          {
+            user && user?.email ? <button onClick={logout} className="btn btn-primary">Logout</button>  :<Link to="/login" className="btn btn-primary">Login</Link>
+          }
+          <p>{user?.email}</p>
+          
         </div>
       </div>
     </div>

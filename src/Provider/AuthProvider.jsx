@@ -9,12 +9,11 @@ import {
 import React, { createContext, useEffect, useState } from "react";
 import auth from "../firebase.init";
 
-
 export const AuthContext = createContext(null);
 
 const AuthProvider = ({ children }) => {
   const provider = new GoogleAuthProvider();
-  const [user, setUser] = useState();
+  const [user, setUser] = useState(null);
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -37,7 +36,9 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
     });
 
-    return unsubscribe();
+     return ()=>{
+      unsubscribe();
+     }
   }, []);
 
   const authInfo = {
@@ -50,9 +51,7 @@ const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider
-     value={authInfo}>{children}
-     </AuthContext.Provider>
+    <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>
   );
 };
 

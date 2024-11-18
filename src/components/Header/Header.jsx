@@ -1,12 +1,12 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { AuthContext } from "../../Provider/AuthProvider";
 
-const Header = () => {
-const {person}=useContext(AuthContext)   
-console.log(person) 
+
+const Header = () => {   
+
 const links =<div className="flex gap-5 font-bold ">
 <NavLink to="/">Home</NavLink>
+<NavLink to="/allService">All Service</NavLink>
 <NavLink to="/profile">My Profile</NavLink>
 
 </div>

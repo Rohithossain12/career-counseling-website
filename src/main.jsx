@@ -10,7 +10,8 @@ import Login from "./components/Login/Login";
 import Register from "./components/Resgister/Register";
 import AuthProvider from "./Provider/AuthProvider";
 import Banner from "./components/Banner/Banner";
-
+import AllService from "./components/AllService/AllService";
+import ServiceDetails from "./Pages/ServiceDetails/ServiceDetails";
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,27 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('/service.json'),
-       
+        loader: () => fetch("/service.json"),
+      },
+      {
+        path: "/allService",
+        element: <AllService></AllService>,
+        loader: () => fetch("/service.json"),
+      },
+
+      {
+        path: "/serviceDetails/:id",
+        element: <ServiceDetails></ServiceDetails>,
+        loader: async ({ params }) => {
+          const response = await fetch("/service.json");
+          const services = await response.json();
+          const singleService = services.find(
+            (service) => service.id == params.id
+            
+           
+          );
+          return singleService;
+        },
       },
       {
         path: "profile",
@@ -42,8 +62,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-   <AuthProvider>
-   <RouterProvider router={router} />
-   </AuthProvider>
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );

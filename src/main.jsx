@@ -9,6 +9,7 @@ import MyProfile from "./components/MyProfile/MyProfile";
 import Login from "./components/Login/Login";
 import Register from "./components/Resgister/Register";
 import AuthProvider from "./Provider/AuthProvider";
+import Banner from "./components/Banner/Banner";
 
 
 const router = createBrowserRouter([
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader:()=>fetch('/service.json')
+        loader:()=>fetch('/service.json'),
+       
       },
       {
         path: "profile",

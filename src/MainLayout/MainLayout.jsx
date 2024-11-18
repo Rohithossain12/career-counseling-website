@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
-import Banner from "../components/Banner/Banner";
+
 
 
 const MainLayout = () => {
@@ -9,7 +9,7 @@ const MainLayout = () => {
         <div>
         <header className="space-y-8">
         <Header></Header>  
-        <Banner></Banner> 
+       
         </header>
         <main className="">
         <Outlet></Outlet>    

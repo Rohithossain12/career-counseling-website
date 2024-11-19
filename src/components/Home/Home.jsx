@@ -3,6 +3,7 @@ import { Link, useLoaderData } from "react-router-dom";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import Banner from "../Banner/Banner";
 import PerfectCareer from "../PerfectCareer/PerfectCareer";
+import CareerGuidance from "../CareerGuidance/CareerGuidance";
 
 const Home = () => {
   const services = useLoaderData();
@@ -28,6 +29,10 @@ const Home = () => {
       <section>
 
         <PerfectCareer></PerfectCareer>
+      </section>
+
+      <section>
+        <CareerGuidance></CareerGuidance>
       </section>
     </div>
   );

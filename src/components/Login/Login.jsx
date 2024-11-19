@@ -1,26 +1,37 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link, Navigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 const Login = () => {
-  const { loginWithGoogle, LoginUser, setUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const { loginWithGoogle, LoginUser, setUser, errorMessage, setErrorMessage } =
+    useContext(AuthContext);
 
   const handleGoogleLogin = () => {
     loginWithGoogle();
+    navigate("/allService");
   };
 
-  const handleLogin = (event) => {
+  const handleLogin = (event) => {+
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
+
+    // reset error message status
+    setErrorMessage("");
+
     LoginUser(email, password)
       .then((result) => {
         const user = result.user;
         setUser(user);
+        toast.success("User login successful");
+        event.target.reset();
+        navigate("/allService");
       })
       .catch((error) => {
-        alert(error.message);
+        setErrorMessage(error.message);
       });
   };
 
@@ -54,15 +65,21 @@ const Login = () => {
             required
           />
           <label className="label">
-            <a href="#" className="label-text-alt link link-hover font-bold">
+            <Link
+              to="/reset"
+              className="label-text-alt link link-hover font-bold"
+            >
               Forgot password?
-            </a>
+            </Link>
           </label>
         </div>
         <div className="form-control mt-6">
           <button className="btn btn-primary font-bold">Login</button>
         </div>
       </form>
+      {errorMessage && (
+        <p className="text-red-500 text-center">{errorMessage}</p>
+      )}
       <p className="text-center font-bold">Or</p>
       <div className="flex justify-center items-center gap-2 pb-2">
         <FcGoogle size={20} />
@@ -76,6 +93,7 @@ const Login = () => {
           Please Register
         </Link>{" "}
       </p>
+      <Toaster />
     </div>
   );
 };

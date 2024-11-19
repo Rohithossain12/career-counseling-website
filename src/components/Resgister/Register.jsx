@@ -1,12 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { FaEye } from "react-icons/fa";
 import { FaEyeSlash } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
+import { updateProfile } from "firebase/auth";
+import auth from "../../firebase.init";
 
 const Register = () => {
+  const navigate = useNavigate();
   const {
     loginWithGoogle,
     createUser,
@@ -19,6 +22,7 @@ const Register = () => {
 
   const handleGoogleLogin = () => {
     loginWithGoogle();
+    navigate("/");
   };
 
   const handleRegister = (event) => {
@@ -28,7 +32,6 @@ const Register = () => {
     const email = event.target.email.value;
     const password = event.target.password.value;
     const terms = event.target.terms.checked;
-    console.log(email, password, terms);
 
     // reset error message
     setErrorMessage("");
@@ -56,9 +59,19 @@ const Register = () => {
     createUser(email, password)
       .then((result) => {
         const user = result.user;
+
+        // update profile name and photo url
+        const profile = {
+          displayName: name,
+          photoURL: photo,
+        };
+        updateProfile(auth.currentUser, profile);
         setUser(user);
         toast.success("Register Successful");
+        event.target.reset();
+        navigate("/");
       })
+
       .catch((error) => {
         setErrorMessage(error.message);
       });
@@ -117,12 +130,12 @@ const Register = () => {
             className="input input-bordered"
             required
           />
-          <button
+          <p
             onClick={() => setShowPassword(!showPassword)}
             className="absolute right-5 top-12 "
           >
             {showPassword ? <FaEyeSlash size={20} /> : <FaEye size={20} />}
-          </button>
+          </p>
 
           <label className="label"></label>
         </div>

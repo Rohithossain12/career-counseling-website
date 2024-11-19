@@ -12,6 +12,7 @@ import AuthProvider from "./Provider/AuthProvider";
 import AllService from "./components/AllService/AllService";
 import ServiceDetails from "./Pages/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import PasswordReset from "./Pages/PasswordReset";
 
 const router = createBrowserRouter([
   {
@@ -48,7 +49,11 @@ const router = createBrowserRouter([
       },
       {
         path: "profile",
-        element: <MyProfile></MyProfile>,
+        element: (
+          <PrivateRoute>
+            <MyProfile></MyProfile>
+          </PrivateRoute>
+        ),
       },
       {
         path: "/login",
@@ -57,6 +62,10 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/reset",
+        element: <PasswordReset></PasswordReset>,
       },
     ],
   },

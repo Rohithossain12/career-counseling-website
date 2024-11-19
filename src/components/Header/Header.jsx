@@ -1,22 +1,22 @@
 import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
-import { FaRegUserCircle } from "react-icons/fa";
 
+const Header = () => {
+  const { user, logout } = useContext(AuthContext);
 
-const Header = () => {   
-const {user,logout}=useContext(AuthContext);  
+  const links = (
+    <div className="flex gap-5 font-bold ">
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/allService">All Service</NavLink>
 
-const links =<div className="flex gap-5 font-bold ">
-<NavLink to="/">Home</NavLink>
-<NavLink to="/allService">All Service</NavLink>
-<NavLink to="/profile">My Profile</NavLink>
-
-</div>
+      <NavLink to="/profile">My Profile</NavLink>
+    </div>
+  );
 
   return (
     <div className="">
-      <div className="navbar container mx-auto  py-2">
+      <div className="navbar container mx-auto  pt-5">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -39,25 +39,34 @@ const links =<div className="flex gap-5 font-bold ">
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
             >
-            {links}
+              {links}
             </ul>
           </div>
           <a className="btn btn-ghost text-xl">ROHIT</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-           {links}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end flex gap-3">
-         {
-          user ? <p>img</p>  : <p><FaRegUserCircle size={40} /></p>
-         }
-          {
-            user && user?.email ? <button onClick={logout} className="btn btn-primary">Logout</button>  :<Link to="/login" className="btn btn-primary">Login</Link>
-          }
-          <p>{user?.email}</p>
-          
+          {user && (
+            <p className=" ">
+              <img
+                title={user.displayName}
+                className="w-12 h-12 border cursor-pointer object-cover rounded-full"
+                src={user.photoURL}
+                alt=""
+              />
+            </p>
+          )}
+          {user && user?.email ? (
+            <button onClick={logout} className="btn btn-primary">
+              Logout
+            </button>
+          ) : (
+            <Link to="/login" className="btn btn-primary">
+              Login
+            </Link>
+          )}
         </div>
       </div>
     </div>

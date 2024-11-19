@@ -14,6 +14,8 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const provider = new GoogleAuthProvider();
   const [user, setUser] = useState(null);
+  const [errorMessage, setErrorMessage] = useState("");
+  const [showPassword,setShowPassword]=useState(false) 
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -36,9 +38,9 @@ const AuthProvider = ({ children }) => {
       setUser(currentUser);
     });
 
-     return ()=>{
+    return () => {
       unsubscribe();
-     }
+    };
   }, []);
 
   const authInfo = {
@@ -48,6 +50,10 @@ const AuthProvider = ({ children }) => {
     logout,
     user,
     setUser,
+    setErrorMessage,
+    errorMessage,
+    showPassword,
+    setShowPassword,
   };
 
   return (

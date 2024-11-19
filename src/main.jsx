@@ -9,7 +9,6 @@ import MyProfile from "./components/MyProfile/MyProfile";
 import Login from "./components/Login/Login";
 import Register from "./components/Resgister/Register";
 import AuthProvider from "./Provider/AuthProvider";
-import Banner from "./components/Banner/Banner";
 import AllService from "./components/AllService/AllService";
 import ServiceDetails from "./Pages/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
@@ -33,14 +32,16 @@ const router = createBrowserRouter([
 
       {
         path: "/serviceDetails/:id",
-        element: <PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
+        element: (
+          <PrivateRoute>
+            <ServiceDetails></ServiceDetails>
+          </PrivateRoute>
+        ),
         loader: async ({ params }) => {
           const response = await fetch("/service.json");
           const services = await response.json();
           const singleService = services.find(
             (service) => service.id == params.id
-            
-           
           );
           return singleService;
         },

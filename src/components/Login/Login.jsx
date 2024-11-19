@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 
 const Login = () => {
@@ -14,14 +14,14 @@ const Login = () => {
     event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
-    LoginUser(email, password).then((result) => {
-      const user = result.user;
-      setUser(user);
-    })
-    .catch(error =>{
-   alert(error.message)
-
-    })
+    LoginUser(email, password)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
   };
 
   return (

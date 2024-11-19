@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useLoaderData } from "react-router-dom";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import Banner from "../Banner/Banner";
+import PerfectCareer from "../PerfectCareer/PerfectCareer";
 
 const Home = () => {
   const services = useLoaderData();
@@ -24,7 +25,10 @@ const Home = () => {
         </Link>
       </div>
 
-      <section></section>
+      <section>
+
+        <PerfectCareer></PerfectCareer>
+      </section>
     </div>
   );
 };

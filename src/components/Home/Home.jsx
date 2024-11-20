@@ -5,6 +5,7 @@ import Banner from "../Banner/Banner";
 import PerfectCareer from "../PerfectCareer/PerfectCareer";
 import CareerGuidance from "../CareerGuidance/CareerGuidance";
 import { Helmet } from "react-helmet";
+import 'animate.css';
 
 const Home = () => {
   const services = useLoaderData();
@@ -19,7 +20,7 @@ const Home = () => {
         <Banner></Banner>
       </section>
 
-      <section className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 pt-10 pb-10">
+      <section className="grid md:grid-cols-2 lg:grid-cols-3  gap-5 pt-10 pb-10">
         {services.slice(0, 6).map((service) => (
           <ServiceCard service={service}></ServiceCard>
         ))}

@@ -3,11 +3,12 @@ import { ImManWoman } from "react-icons/im";
 import { FaUniversity } from "react-icons/fa";
 import { LiaSchoolSolid } from "react-icons/lia";
 import { PiCertificateLight } from "react-icons/pi";
+
 const PerfectCareer = () => {
   return (
     <div className="pt-5 bg-[#F1F0EA] rounded-lg ">
       <div className="text-center pt-5 pb-5 space-y-3 ">
-        <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
+        <h1 className="text-xl md:text-2xl lg:text-4xl font-bold animate__animated  animate__zoomIn animate__slower	3s  animate__infinite	infinite text-green-500">
           Discover Your Perfect Career
         </h1>
         <p className="text-gray-500">

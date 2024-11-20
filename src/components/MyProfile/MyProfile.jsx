@@ -3,6 +3,7 @@ import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
 import {Helmet} from "react-helmet";
 
+
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
@@ -11,7 +12,7 @@ const MyProfile = () => {
       <Helmet>
         <title>Career Counseling | My Profile </title>
       </Helmet>
-      <div className="card bg-[#F1F0EA] border ">
+      <div className="card bg-[#F1F0EA] border  animate__animated animate__backInRight ">
         <figure className="p-3">
           <img className=" w-full h-full object-cover rounded-lg " src={user.photoURL} alt="Shoes" />
         </figure>

@@ -2,7 +2,7 @@ const CareerGuidance = () => {
   return (
     <div className="mt-12 mb-12 bg-[#F1F0EA] p-10 rounded-lg">
       <div className="text-center pb-5 space-y-2">
-        <h1 className="text-xl md:text-2xl lg:text-3xl  font-bold">
+        <h1 className="text-xl md:text-2xl lg:text-4xl animate__animated  animate__zoomIn animate__slower	3s  animate__infinite	infinite text-green-500  font-bold">
           Shaping the Career Guidance Landscape
         </h1>
         <p className=" text-gray-500 pb-5">

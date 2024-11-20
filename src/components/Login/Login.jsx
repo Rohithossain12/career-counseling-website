@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -6,9 +6,14 @@ import toast, { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
+  const [email, setEmail] = useState('')
+  const handleEmailChange = (event) => {
+    setEmail(event.target.value);
+  }
   const navigate = useNavigate();
   const { loginWithGoogle, LoginUser, setUser, errorMessage, setErrorMessage } =
     useContext(AuthContext);
+   
 
   const handleGoogleLogin = () => {
     loginWithGoogle();
@@ -65,6 +70,8 @@ const Login = () => {
             type="email"
             placeholder="email"
             name="email"
+            value={email}
+            onChange={handleEmailChange}
             className="input input-bordered"
             required
           />
@@ -83,6 +90,7 @@ const Login = () => {
           <label className="label">
             <Link
               to="/reset"
+              state={email}
               className="label-text-alt link link-hover font-bold"
             >
               Forgot password?

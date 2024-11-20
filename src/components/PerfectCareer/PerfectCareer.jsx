@@ -33,7 +33,7 @@ const PerfectCareer = () => {
         />
       </div>
 
-      <div className="bg-[#6D8CA0] rounded-lg grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 p-10 ">
+      <div className="bg-[#6D8CA0] rounded-lg grid grid-cols-1 gap-5 md:grid-cols-3 lg:grid-cols-4 p-10 ">
         <div className="flex items-center gap-3 ">
           <div className=" rounded-full">
             <p className="p-4 bg-white rounded-full">

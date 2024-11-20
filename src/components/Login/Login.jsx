@@ -37,7 +37,7 @@ const Login = () => {
   };
 
   return (
-    <div className="card bg-base-200  max-w-lg mx-auto shrink-0  mt-10 mb-10">
+    <div className="card bg-green-100  max-w-lg mx-auto shrink-0  mt-10 mb-10">
       <Helmet>
         <title>Career Counseling | Login</title>
       </Helmet>

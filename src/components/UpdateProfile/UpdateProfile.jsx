@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
+import toast, { Toaster } from "react-hot-toast";
 
 const UpdateProfile = () => {
   const { errorMessage, setErrorMessage } = useContext(AuthContext);
@@ -19,7 +20,9 @@ const UpdateProfile = () => {
 
     updateProfile(auth.currentUser, profile)
       .then(() => {
-        navigate("/profile");
+          toast.success("Profile Update Successful");
+          navigate("/profile");
+
       })
       .catch((error) => {
         setErrorMessage(error.message);
@@ -27,8 +30,8 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="pt-5 pb-8">
-      <div className="card   max-w-lg mx-auto  shrink-0 bg-base-200">
+    <div className="pt-5 pb-8 ">
+      <div className="card bg-green-100  max-w-lg mx-auto  shrink-0 ">
         <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold ml-8 pt-5">
           Update Profile
         </h1>

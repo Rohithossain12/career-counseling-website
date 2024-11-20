@@ -1,6 +1,6 @@
 const CareerGuidance = () => {
   return (
-    <div className="mt-5 mb-12 bg-base-200 p-10 rounded">
+    <div className="mt-5 mb-12 bg-green-100 p-10 rounded">
       <div className="text-center pb-5 space-y-2">
         <h1 className="text-xl md:text-2xl lg:text-3xl  font-bold">
           Shaping the Career Guidance Landscape

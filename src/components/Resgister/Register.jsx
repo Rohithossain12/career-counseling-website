@@ -48,11 +48,12 @@ const Register = () => {
     }
 
     const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,}$/;
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/
+
 
     if (!passwordRegex.test(password)) {
       setErrorMessage(
-        " at least 1 uppercase,1 lowercase,one number,1 special character"
+        " at least one uppercase,one lowercase,one number"
       );
       return;
     }
@@ -79,7 +80,7 @@ const Register = () => {
   };
 
   return (
-    <div className="card bg-base-200  max-w-lg mx-auto shrink-0  mt-10 mb-10">
+    <div className="card bg-green-100  max-w-lg mx-auto shrink-0  mt-10 mb-10">
       <Helmet>
         <title>Career Counseling | Register</title>
       </Helmet>

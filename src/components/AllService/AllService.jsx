@@ -1,7 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import ServiceCard from "../ServiceCard/ServiceCard";
 import { Helmet } from "react-helmet";
-
+import toast, { Toaster } from "react-hot-toast";
 
 
 const AllService = () => {

@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { MdOutlineFeedback } from "react-icons/md";
 import { Helmet } from "react-helmet";
+import toast from "react-hot-toast";
+
 
 const ServiceDetails = () => {
   
@@ -21,7 +23,9 @@ const ServiceDetails = () => {
     event.preventDefault();
     const review = event.target.review.value;
     setReview(review);
+    toast.success("Successfully Submitted");
     event.target.reset();
+
   };
 
   return (
@@ -29,7 +33,7 @@ const ServiceDetails = () => {
       <Helmet>
         <title>Career Counseling | Service Details</title>
       </Helmet>
-      <div className="  bg-base-200 p-5 rounded-lg ">
+      <div className="  bg-green-100 p-5 rounded-lg ">
         <div className=" md:h-[400px] grid grid-cols-1 gap-5 md:grid-cols-2">
           <div className=" border rounded-lg ">
             <img
@@ -59,7 +63,7 @@ const ServiceDetails = () => {
       </div>
 
       {/* Review / Feedback */}
-      <div className="grid grid-cols-1 bg-base-200 rounded-lg md:grid-cols-2 mt-10 border p-16 gap-5">
+      <div className="grid grid-cols-1 bg-green-100 rounded-lg md:grid-cols-2 mt-10 border p-16 gap-5">
         <form onSubmit={handleReview} className="flex items-center gap-5">
          <textarea className=" w-80 h-20 p-2 rounded-lg" name="review" id="" placeholder="Write a feedback"></textarea>
           <button className="btn btn-primary">Submit</button>

@@ -11,7 +11,7 @@ const MyProfile = () => {
       <Helmet>
         <title>Career Counseling | My Profile </title>
       </Helmet>
-      <div className="card bg-base-100 border ">
+      <div className="card bg-green-100 border ">
         <figure className="p-3">
           <img className=" w-full h-full object-cover rounded-lg " src={user.photoURL} alt="Shoes" />
         </figure>

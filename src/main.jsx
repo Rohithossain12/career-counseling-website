@@ -15,6 +15,7 @@ import ServiceDetails from "./Pages/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import PasswordReset from "./Pages/PasswordReset";
 import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
+import About from "./components/About/About";
 
 const router = createBrowserRouter([
   {
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>,
+      },
+      {
+        path: "/about",
+        element: <About></About>,
       },
       {
         path: "/register",

@@ -11,6 +11,7 @@ const Header = () => {
       <NavLink to="/allService">All Service</NavLink>
 
       {user?.email && <NavLink to="/profile">My Profile</NavLink>}
+      <NavLink to="/about">About Us</NavLink>
     </div>
   );
 
@@ -37,7 +38,7 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-lg lg:hidden  dropdown-content bg-[#F1F0EA]  rounded-box z-[1] mt-5 pb-2 w-52  p-5 shadow"
+              className="menu menu-lg lg:hidden  dropdown-content bg-[#F1F0EA]  rounded-box z-[1] mt-5 pb-2 w-72  p-5 shadow"
             >
               {links}
             </ul>

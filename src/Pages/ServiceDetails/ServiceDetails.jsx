@@ -29,11 +29,11 @@ const ServiceDetails = () => {
   };
 
   return (
-    <div className="mt-10 mb-16 container mx-auto px-5">
+    <div className=" mt-24 md:mt-10 mb-16 container mx-auto px-5">
       <Helmet>
         <title>Career Counseling | Service Details</title>
       </Helmet>
-      <div className="  bg-green-100 p-5 rounded-lg ">
+      <div className="  bg-[#F1F0EA] p-5 rounded-lg ">
         <div className=" md:h-[400px] grid grid-cols-1 gap-5 md:grid-cols-2">
           <div className=" border rounded-lg ">
             <img
@@ -63,10 +63,10 @@ const ServiceDetails = () => {
       </div>
 
       {/* Review / Feedback */}
-      <div className="grid grid-cols-1 bg-green-100 rounded-lg md:grid-cols-2 mt-10 border p-16 gap-5">
+      <div className="grid grid-cols-1 bg-[#F1F0EA] rounded-lg md:grid-cols-2 mt-10 border p-16 gap-5">
         <form onSubmit={handleReview} className="flex items-center gap-5">
          <textarea className=" w-80 h-20 p-2 rounded-lg" name="review" id="" placeholder="Write a feedback"></textarea>
-          <button className="btn btn-primary">Submit</button>
+          <button className="px-3 py-2 bg-[#6D8CA0] text-white rounded-lg">Submit</button>
         </form>
         <div className="bg-white rounded-lg flex p-2 gap-2 ">
         <MdOutlineFeedback  size={30} className="text-gray-400"/>

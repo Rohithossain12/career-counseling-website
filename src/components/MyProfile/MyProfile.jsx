@@ -7,11 +7,11 @@ const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
-    <div className="max-w-lg mx-auto flex justify-center items-center pt-10 pb-10">
+    <div className="max-w-lg mx-auto flex justify-center items-center pt-24 md:pt-10 pb-10">
       <Helmet>
         <title>Career Counseling | My Profile </title>
       </Helmet>
-      <div className="card bg-green-100 border ">
+      <div className="card bg-[#F1F0EA] border ">
         <figure className="p-3">
           <img className=" w-full h-full object-cover rounded-lg " src={user.photoURL} alt="Shoes" />
         </figure>
@@ -19,7 +19,7 @@ const MyProfile = () => {
           <h2 className="text-center text-2xl font-bold">Name: {user.displayName}</h2>
           <p className="text-lg font-bold">Email : {user.email}</p>
           <div className="card-actions justify-center">
-            <Link to="/updateProfile" className="btn btn-primary">
+            <Link to="/updateProfile" className="px-8 py-2 rounded-lg text-white bg-[#6D8CA0] font-bold ">
               Update Profile
             </Link>
             ;

@@ -80,7 +80,7 @@ const Register = () => {
   };
 
   return (
-    <div className="card bg-green-100  max-w-lg mx-auto shrink-0  mt-10 mb-10">
+    <div className="card bg-[#F1F0EA]  max-w-lg mx-auto shrink-0  mt-24 md:mt-10 mb-10">
       <Helmet>
         <title>Career Counseling | Register</title>
       </Helmet>
@@ -157,7 +157,7 @@ const Register = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="btn btn-primary font-bold">Register</button>
+          <button className="px-8 py-2 rounded-lg bg-[#6D8CA0] text-white font-bold">Register</button>
         </div>
       </form>
       {errorMessage && (

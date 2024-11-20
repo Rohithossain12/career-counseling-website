@@ -5,7 +5,7 @@
 
 .active{
   display: flex;
-  color:blue;
+  color:orange;
   gap: 20px;
 }
 

@@ -10,13 +10,13 @@ const Header = () => {
       <NavLink to="/">Home</NavLink>
       <NavLink to="/allService">All Service</NavLink>
 
-      <NavLink to="/profile">My Profile</NavLink>
+      {user?.email && <NavLink to="/profile">My Profile</NavLink>}
     </div>
   );
 
   return (
-    <div className="bg-green-500">
-      <div className="navbar container mx-auto  pt-3 pb-3">
+    <div className="bg-[#6D8CA0]">
+      <div className="navbar container mx-auto  pt-4 pb-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -37,18 +37,20 @@ const Header = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-lg lg:hidden  dropdown-content bg-[#F1F0EA]  rounded-box z-[1] mt-5 pb-2 w-52  p-5 shadow"
             >
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost font-extrabold text-2xl"><p>
-            <span className="text-purple-700">Quick</span>
-            <span className="text-green-500">Career</span>
-            </p></a>
+          <a className=" px-3 md:px-6 py-2 bg-white rounded-full md:font-extrabold  md:text-2xl">
+            <p>
+              <span className="text-purple-700">Quick</span>
+              <span className="text-green-500">Career</span>
+            </p>
+          </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu text-white menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end flex gap-3">
           {user && (
@@ -62,11 +64,17 @@ const Header = () => {
             </p>
           )}
           {user && user?.email ? (
-            <button onClick={logout} className="btn btn-primary">
+            <button
+              onClick={logout}
+              className="px-4 py-2 font-semibold bg-white rounded-full"
+            >
               Logout
             </button>
           ) : (
-            <Link to="/login" className="btn btn-primary">
+            <Link
+              to="/login"
+              className="px-4 py-2 bg-white rounded-full font-semibold"
+            >
               Login
             </Link>
           )}

@@ -23,6 +23,18 @@ const Login = () => {
     // reset error message status
     setErrorMessage("");
 
+
+    const passwordRegex =
+      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/
+
+
+    if (!passwordRegex.test(password)) {
+      setErrorMessage(
+        " at least one uppercase,one lowercase,one number"
+      );
+      return;
+    }
+
     LoginUser(email, password)
       .then((result) => {
         const user = result.user;
@@ -37,7 +49,7 @@ const Login = () => {
   };
 
   return (
-    <div className="card bg-green-100  max-w-lg mx-auto shrink-0  mt-10 mb-10">
+    <div className="card bg-[#F1F0EA]  max-w-lg mx-auto shrink-0 mt-24 md:mt-10 mb-10">
       <Helmet>
         <title>Career Counseling | Login</title>
       </Helmet>
@@ -78,7 +90,7 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="btn btn-primary font-bold">Login</button>
+          <button className="px-8 py-2 rounded-lg bg-[#6D8CA0] text-white font-bold">Login</button>
         </div>
       </form>
       {errorMessage && (

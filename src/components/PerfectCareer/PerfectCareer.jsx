@@ -5,7 +5,7 @@ import { LiaSchoolSolid } from "react-icons/lia";
 import { PiCertificateLight } from "react-icons/pi";
 const PerfectCareer = () => {
   return (
-    <div className="pt-5 pb-10">
+    <div className="pt-5 bg-[#F1F0EA] rounded-lg ">
       <div className="text-center pt-5 pb-5 space-y-3 ">
         <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
           Discover Your Perfect Career
@@ -32,14 +32,14 @@ const PerfectCareer = () => {
         />
       </div>
 
-      <div className="bg-green-100 grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 p-10 rounded">
-        <div className="flex items-center gap-3">
+      <div className="bg-[#6D8CA0] rounded-lg grid grid-cols-2 gap-5 md:grid-cols-3 lg:grid-cols-4 p-10 ">
+        <div className="flex items-center gap-3 ">
           <div className=" rounded-full">
             <p className="p-4 bg-white rounded-full">
               <ImManWoman size={30} />
             </p>
           </div>
-          <div>
+          <div className="text-white">
             <h1 className=" text-xl md:text-2xl lg:text-3xl">2.5 Million</h1>
             <p>Students Impacted</p>
           </div>
@@ -50,7 +50,7 @@ const PerfectCareer = () => {
             <PiCertificateLight size={30} />
             </p>
           </div>
-          <div>
+          <div className="text-white">
             <h1 className="text-xl md:text-2xl lg:text-3xl">51,000</h1>
             <p>Educators Certified</p>
           </div>
@@ -61,7 +61,7 @@ const PerfectCareer = () => {
             <LiaSchoolSolid size={30} />
             </p>
           </div>
-          <div>
+          <div className="text-white">
             <h1 className="text-xl md:text-2xl lg:text-3xl">250+</h1>
             <p>Partner Schools</p>
           </div>
@@ -72,7 +72,7 @@ const PerfectCareer = () => {
             <FaUniversity size={30} />
             </p>
           </div>
-          <div>
+          <div className="text-white">
             <h1 className="text-xl md:text-2xl lg:text-3xl">50+</h1>
             <p>University Partners</p>
           </div>

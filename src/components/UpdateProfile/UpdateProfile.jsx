@@ -30,9 +30,9 @@ const UpdateProfile = () => {
   };
 
   return (
-    <div className="pt-5 pb-8 ">
-      <div className="card bg-green-100  max-w-lg mx-auto  shrink-0 ">
-        <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold ml-8 pt-5">
+    <div className="mt-24  md:mt-10 pb-8 ">
+      <div className="card bg-[#F1F0EA] max-w-lg mx-auto p-10 shrink-0 ">
+        <h1 className=" text-xl md:text-2xl lg:text-3xl font-bold ml-8 ">
           Update Profile
         </h1>
         <form onSubmit={handleUpdateProfile} className="card-body ">
@@ -62,7 +62,7 @@ const UpdateProfile = () => {
           </div>
 
           <div className="form-control mt-6">
-            <button className="btn btn-primary">Update</button>
+            <button className="px-8 py-2 bg-[#6D8CA0]  text-white font-bold rounded-lg">Update</button>
           </div>
         </form>
         {errorMessage && (

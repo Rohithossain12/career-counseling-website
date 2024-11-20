@@ -15,7 +15,7 @@ const Home = () => {
         <title>Career Counseling | Home</title>
       </Helmet>
 
-      <section className="pt-8">
+      <section className="pt-24 md:pt-8">
         <Banner></Banner>
       </section>
 
@@ -25,7 +25,7 @@ const Home = () => {
         ))}
       </section>
       <div className="pb-8 text-center">
-        <Link to="/allService" className="btn btn-primary">
+        <Link to="/allService" className="py-3 px-5 rounded-full bg-[#6D8CA0] text-white">
           View All
         </Link>
       </div>

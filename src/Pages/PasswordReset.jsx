@@ -17,8 +17,8 @@ const PasswordReset = () => {
   };
 
   return (
-    <div className="pb-14 pt-14">
-      <div className="card bg-green-100 w-full max-w-lg mx-auto  shrink-0 ">
+    <div className="pb-14 mt-24  md:mt-10">
+      <div className="card bg-[#F1F0EA]  max-w-lg mx-auto p-10 shrink-0 ">
         <form onSubmit={handleForgetPassword} className="card-body">
           <h1 className="text-xl md:text-2xl lg:text-3xl font-bold">
             Forget Password
@@ -37,7 +37,7 @@ const PasswordReset = () => {
           </div>
           <div className="form-control"></div>
           <div className="form-control mt-6">
-            <button className="btn btn-primary font-bold">Reset</button>
+            <button className="px-8 py-2 text-white bg-[#6D8CA0] rounded-lg font-bold">Reset</button>
           </div>
         </form>
       </div>

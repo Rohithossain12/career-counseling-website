@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import { useLoaderData } from "react-router-dom";
+import { MdOutlineFeedback } from "react-icons/md";
 
 const ServiceDetails = () => {
-const [review,setReview]=("");  
+  
+  const [review, setReview] = useState("");
   const {
     description,
     image,
@@ -13,6 +15,13 @@ const [review,setReview]=("");
     counselor,
     rating,
   } = useLoaderData();
+
+  const handleReview = (event) => {
+    event.preventDefault();
+    const review = event.target.review.value;
+    setReview(review);
+    event.target.reset();
+  };
 
   return (
     <div className="mt-10 mb-16 container mx-auto px-5">
@@ -45,14 +54,18 @@ const [review,setReview]=("");
         </div>
       </div>
 
-      <div className="max-w-lg text-center justify-center flex gap-2 mx-auto mt-8">
-        <div>
-          <form>
-            <input type="text" className=""/>
-          </form>
+      {/* Review / Feedback */}
+      <div className="grid grid-cols-1 bg-base-200 rounded-lg md:grid-cols-2 mt-10 border p-16 gap-5">
+        <form onSubmit={handleReview} className="flex items-center gap-5">
+         <textarea className=" w-80 h-20 p-2 rounded-lg" name="review" id="" placeholder="Write a feedback"></textarea>
+          <button className="btn btn-primary">Submit</button>
+        </form>
+        <div className="bg-white rounded-lg flex p-2 gap-2 ">
+        <MdOutlineFeedback  size={30} className="text-gray-400"/>
+          <p className="text-xl text-gray-400">{review}</p>
         </div>
-        <div></div>
       </div>
+      
     </div>
   );
 };

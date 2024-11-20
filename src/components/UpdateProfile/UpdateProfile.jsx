@@ -1,26 +1,29 @@
 import { updateProfile } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import auth from "../../firebase.init";
+import { useContext } from "react";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 const UpdateProfile = () => {
-    const navigate = useNavigate()
+  const { errorMessage, setErrorMessage } = useContext(AuthContext);
+  const navigate = useNavigate();
   const handleUpdateProfile = (event) => {
     event.preventDefault();
     const name = event.target.name.value;
     const photo = event.target.photo.value;
 
     const profile = {
-        displayName: name,
-        photoURL: photo,
-      };
+      displayName: name,
+      photoURL: photo,
+    };
 
-      updateProfile(auth.currentUser, profile)
+    updateProfile(auth.currentUser, profile)
       .then(() => {
-        navigate('/profile')
+        navigate("/profile");
       })
-      .catch(err => {
-        console.log(err);
-      })
+      .catch((error) => {
+        setErrorMessage(error.message);
+      });
   };
 
   return (
@@ -59,6 +62,9 @@ const UpdateProfile = () => {
             <button className="btn btn-primary">Update</button>
           </div>
         </form>
+        {errorMessage && (
+          <p className="text-red-500 mt-2 ml-8 ">{errorMessage}</p>
+        )}
       </div>
     </div>
   );

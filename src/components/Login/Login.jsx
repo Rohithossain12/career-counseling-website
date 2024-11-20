@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Provider/AuthProvider";
 import toast, { Toaster } from "react-hot-toast";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -37,6 +38,9 @@ const Login = () => {
 
   return (
     <div className="card bg-base-200  max-w-lg mx-auto shrink-0  mt-10 mb-10">
+      <Helmet>
+        <title>Career Counseling | Login</title>
+      </Helmet>
       <form onSubmit={handleLogin} className="card-body ">
         <h1 className=" text-xl md:text-2xl lg:text-3xl font-semibold ">
           Login Now

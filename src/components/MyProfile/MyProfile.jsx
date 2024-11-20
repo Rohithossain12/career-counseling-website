@@ -1,12 +1,16 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { Link } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 const MyProfile = () => {
   const { user } = useContext(AuthContext);
 
   return (
     <div className="max-w-lg mx-auto flex justify-center items-center pt-10 pb-10">
+      <Helmet>
+        <title>Career Counseling | My Profile </title>
+      </Helmet>
       <div className="card bg-base-100 border ">
         <figure className="p-3">
           <img className=" w-full h-full object-cover rounded-lg " src={user.photoURL} alt="Shoes" />

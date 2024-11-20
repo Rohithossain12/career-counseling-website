@@ -7,6 +7,7 @@ import { FaEyeSlash } from "react-icons/fa";
 import toast, { Toaster } from "react-hot-toast";
 import { updateProfile } from "firebase/auth";
 import auth from "../../firebase.init";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -79,6 +80,9 @@ const Register = () => {
 
   return (
     <div className="card bg-base-200  max-w-lg mx-auto shrink-0  mt-10 mb-10">
+      <Helmet>
+        <title>Career Counseling | Register</title>
+      </Helmet>
       <form onSubmit={handleRegister} className="card-body ">
         <h1 className=" text-xl md:text-2xl lg:text-3xl font-semibold ">
           Register Now

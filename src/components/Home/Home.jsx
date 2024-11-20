@@ -4,13 +4,17 @@ import ServiceCard from "../ServiceCard/ServiceCard";
 import Banner from "../Banner/Banner";
 import PerfectCareer from "../PerfectCareer/PerfectCareer";
 import CareerGuidance from "../CareerGuidance/CareerGuidance";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   const services = useLoaderData();
-  
 
   return (
     <div className="container mx-auto px-5">
+      <Helmet>
+        <title>Career Counseling | Home</title>
+      </Helmet>
+
       <section className="pt-8">
         <Banner></Banner>
       </section>
@@ -27,7 +31,6 @@ const Home = () => {
       </div>
 
       <section>
-
         <PerfectCareer></PerfectCareer>
       </section>
 

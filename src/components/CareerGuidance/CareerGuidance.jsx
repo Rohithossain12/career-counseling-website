@@ -7,7 +7,7 @@ const CareerGuidance = () => {
         </h1>
         <p className=" text-gray-500 pb-5">
           Comprehensive career guidance solutions for students, parents,
-          educators and schools
+          educators and schools 
         </p>
       </div>
 

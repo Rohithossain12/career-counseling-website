@@ -2,6 +2,7 @@ import React from "react";
 import { useLoaderData } from "react-router-dom";
 
 const ServiceDetails = () => {
+const [review,setReview]=("");  
   const {
     description,
     image,
@@ -25,15 +26,32 @@ const ServiceDetails = () => {
             />
           </div>
           <div className=" border rounded-lg space-y-2 ">
-            <h1 className="ml-5 mt-4 text-xl md:text-2xl font-bold">Service Name : {serviceName}</h1>
-            <h2 className="ml-5 text-lg md:text-xl font-semibold">Category : {category}</h2>
-            <h3 className="ml-5 text-lg md:text-xl font-semibold">Description : {description}</h3>
-            <h4 className="ml-5 text-lg md:text-xl font-semibold">Counselor : {counselor}</h4>
-             <p className="ml-5 font-semibold">Pricing : {pricing}</p>
-             <p className="ml-5 font-semibold">Duration : {duration}</p>
-             <p className="ml-5 font-semibold pb-5">Rating : {rating}</p>
+            <h1 className="ml-5 mt-4 text-xl md:text-2xl font-bold">
+              Service Name : {serviceName}
+            </h1>
+            <h2 className="ml-5 text-lg md:text-xl font-semibold">
+              Category : {category}
+            </h2>
+            <h3 className="ml-5 text-lg md:text-xl font-semibold">
+              Description : {description}
+            </h3>
+            <h4 className="ml-5 text-lg md:text-xl font-semibold">
+              Counselor : {counselor}
+            </h4>
+            <p className="ml-5 font-semibold">Pricing : {pricing}</p>
+            <p className="ml-5 font-semibold">Duration : {duration}</p>
+            <p className="ml-5 font-semibold pb-5">Rating : {rating}</p>
           </div>
         </div>
+      </div>
+
+      <div className="max-w-lg text-center justify-center flex gap-2 mx-auto mt-8">
+        <div>
+          <form>
+            <input type="text" className=""/>
+          </form>
+        </div>
+        <div></div>
       </div>
     </div>
   );

@@ -13,6 +13,7 @@ import AllService from "./components/AllService/AllService";
 import ServiceDetails from "./Pages/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import PasswordReset from "./Pages/PasswordReset";
+import UpdateProfile from "./components/UpdateProfile/UpdateProfile";
 
 const router = createBrowserRouter([
   {
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path: "/reset",
         element: <PasswordReset></PasswordReset>,
+      },
+      {
+        path: "/updateProfile",
+        element:<UpdateProfile></UpdateProfile>,
       },
     ],
   },

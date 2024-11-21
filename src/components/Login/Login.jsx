@@ -17,7 +17,7 @@ const Login = () => {
 
   const handleGoogleLogin = () => {
     loginWithGoogle();
-    navigate("/allService");
+    navigate("/");
   };
 
   const handleLogin = (event) => {+

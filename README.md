@@ -1,6 +1,6 @@
-# Career Counseling
+#  Quick Career
 
-Career counseling is a process that helps individuals understand their skills, interests, and career aspirations to make informed decisions about their education, job opportunities, and professional growth. It provides guidance on career planning, goal setting, and overcoming challenges to achieve success in the workplace.
+ Quick Career is a process that helps individuals understand their skills, interests, and career aspirations to make informed decisions about their education, job opportunities, and professional growth. It provides guidance on career planning, goal setting, and overcoming challenges to achieve success in the workplace.
 
 ## Technologies used.
 
@@ -30,6 +30,4 @@ Career counseling is a process that helps individuals understand their skills, i
 
 ### 
 
-## Requirement Document Link.
 
-### 

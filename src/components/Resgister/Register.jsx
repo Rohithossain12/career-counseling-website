@@ -82,7 +82,7 @@ const Register = () => {
   return (
     <div className="card bg-[#F1F0EA]  max-w-lg mx-auto shrink-0  mt-24 md:mt-10 mb-10">
       <Helmet>
-        <title>Career Counseling | Register</title>
+        <title> Quick Career | Register</title>
       </Helmet>
       <form onSubmit={handleRegister} className="card-body ">
         <h1 className=" text-xl md:text-2xl lg:text-3xl font-semibold ">

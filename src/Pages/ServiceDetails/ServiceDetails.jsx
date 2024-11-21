@@ -31,7 +31,7 @@ const ServiceDetails = () => {
   return (
     <div className=" mt-24 md:mt-10 mb-16 container mx-auto px-5">
       <Helmet>
-        <title>Career Counseling | Service Details</title>
+        <title> Quick Career | Service Details</title>
       </Helmet>
       <div className="  bg-[#F1F0EA] p-5 rounded-lg ">
         <div className=" md:h-[400px] grid grid-cols-1 gap-5 md:grid-cols-2">

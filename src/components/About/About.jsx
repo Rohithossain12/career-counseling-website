@@ -1,15 +1,20 @@
+import { Helmet } from "react-helmet";
+
 const About = () => {
   return (
     <div className="container mx-auto px-5 mt-24 md:mt-10 mb-10">
+      <Helmet>
+        <title> Quick Career | About Us</title>
+      </Helmet>
       <div className="space-y-4 ">
         <div className="collapse collapse-arrow bg-[#F1F0EA] ">
           <input type="radio" name="my-accordion-2" defaultChecked />
           <div className="collapse-title text-xl font-medium">
-            What services do you provide in career counseling?
+            What services do you provide in  Quick Career?
           </div>
           <div className="collapse-content">
             <p>
-              Answer : We offer personalized career counseling sessions, career
+              Answer : We offer personalized  Quick Career sessions, career
               assessments, resume building, interview preparation, and guidance
               on selecting education or training programs to help you achieve
               your professional goals.
@@ -19,7 +24,7 @@ const About = () => {
         <div className="collapse collapse-arrow bg-[#F1F0EA]">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium">
-            How much does a career counseling session cost?
+            How much does a  Quick Career session cost?
           </div>
           <div className="collapse-content">
             <p>
@@ -33,7 +38,7 @@ const About = () => {
         <div className="collapse collapse-arrow bg-[#F1F0EA]">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium">
-            Can career counseling help me switch careers?
+            Can  Quick Career help me switch careers?
           </div>
           <div className="collapse-content">
             <p>
@@ -60,7 +65,7 @@ const About = () => {
         <div className="collapse collapse-arrow bg-[#F1F0EA]">
           <input type="radio" name="my-accordion-2" />
           <div className="collapse-title text-xl font-medium">
-            What should I prepare before my first career counseling session?
+            What should I prepare before my first  Quick Career session?
           </div>
           <div className="collapse-content">
             <p>

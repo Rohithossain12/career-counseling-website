@@ -36,6 +36,7 @@ const Header = () => {
                 />
               </svg>
             </div>
+
             <ul
               tabIndex={0}
               className="menu menu-lg lg:hidden  dropdown-content bg-[#F1F0EA]  rounded-box z-[1] mt-5 pb-2 w-72  p-5 shadow"

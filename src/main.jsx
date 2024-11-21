@@ -30,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/allService",
-        element: <AllService></AllService>,
+        element: <PrivateRoute><AllService></AllService></PrivateRoute>,
         loader: () => fetch("/service.json"),
       },
 

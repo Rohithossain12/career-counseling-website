@@ -10,7 +10,7 @@ const MyProfile = () => {
   return (
     <div className="max-w-lg mx-auto flex justify-center items-center pt-24 md:pt-10 pb-10">
       <Helmet>
-        <title>Career Counseling | My Profile </title>
+        <title> Quick Career | My Profile </title>
       </Helmet>
       <div className="card bg-[#F1F0EA] border  animate__animated animate__backInRight ">
         <figure className="p-3">

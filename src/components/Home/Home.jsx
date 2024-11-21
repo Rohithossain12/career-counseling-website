@@ -13,11 +13,20 @@ const Home = () => {
   return (
     <div className="container mx-auto px-5">
       <Helmet>
-        <title>Career Counseling | Home</title>
+        <title> Quick Career | Home</title>
       </Helmet>
 
       <section className="pt-24 md:pt-8">
         <Banner></Banner>
+      </section>
+
+      <section className="mt-10 mb-4 ">
+      <div className="">
+        <h1 className="text-center lg:text-4xl font-bold md:text-2xl text-xl text-green-500 mx-auto animate__animated  animate__zoomIn animate__slower	3s  animate__infinite	infinite"> Our Services</h1>
+        <p className="text-center pt-2 text-gray-500 animate__animated animate__backInRight animate__slow	2s ">
+       Empowering individuals to make informed career choices through personalized guidance and expert advice.<br/></p>
+       <p className="text-center text-gray-500 animate__animated  animate__backInLeft animate__slow	2s"> Discover your potential and achieve your professional goals with our dedicated support.</p>
+      </div>
       </section>
 
       <section className="grid md:grid-cols-2 lg:grid-cols-3  gap-5 pt-10 pb-10">

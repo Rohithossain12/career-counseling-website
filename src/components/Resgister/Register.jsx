@@ -22,8 +22,17 @@ const Register = () => {
   } = useContext(AuthContext);
 
   const handleGoogleLogin = () => {
-    loginWithGoogle();
-    navigate("/");
+    loginWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        toast.success("User Register successful");
+
+        navigate("/");
+      })
+      .catch(() => {
+        toast.error("User Register Unsuccessful");
+      });
   };
 
   const handleRegister = (event) => {
@@ -47,14 +56,10 @@ const Register = () => {
       return;
     }
 
-    const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/
-
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
     if (!passwordRegex.test(password)) {
-      setErrorMessage(
-        " at least one uppercase,one lowercase,one number"
-      );
+      setErrorMessage(" at least one uppercase,one lowercase,one number");
       return;
     }
 
@@ -157,7 +162,9 @@ const Register = () => {
         </div>
 
         <div className="form-control mt-6">
-          <button className="px-8 py-2 rounded-lg bg-[#6D8CA0] text-white font-bold">Register</button>
+          <button className="px-8 py-2 rounded-lg bg-[#6D8CA0] text-white font-bold">
+            Register
+          </button>
         </div>
       </form>
       {errorMessage && (

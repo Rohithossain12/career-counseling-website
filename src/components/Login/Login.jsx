@@ -6,37 +6,40 @@ import toast, { Toaster } from "react-hot-toast";
 import { Helmet } from "react-helmet";
 
 const Login = () => {
-  const [email, setEmail] = useState('')
+  const [email, setEmail] = useState("");
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
-  }
+  };
   const navigate = useNavigate();
   const { loginWithGoogle, LoginUser, setUser, errorMessage, setErrorMessage } =
     useContext(AuthContext);
-   
 
   const handleGoogleLogin = () => {
-    loginWithGoogle();
-    navigate("/");
+    loginWithGoogle()
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        toast.success("User login successful");
+
+        navigate("/");
+      })
+      .catch(() => {
+        toast.error("User login Unsuccessful");
+      });
   };
 
-  const handleLogin = (event) => {+
-    event.preventDefault();
+  const handleLogin = (event) => {
+    +event.preventDefault();
     const email = event.target.email.value;
     const password = event.target.password.value;
 
     // reset error message status
     setErrorMessage("");
 
-
-    const passwordRegex =
-      /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/
-
+    const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{6,}$/;
 
     if (!passwordRegex.test(password)) {
-      setErrorMessage(
-        " at least one uppercase,one lowercase,one number"
-      );
+      setErrorMessage(" at least one uppercase,one lowercase,one number");
       return;
     }
 
@@ -46,7 +49,7 @@ const Login = () => {
         setUser(user);
         toast.success("User login successful");
         event.target.reset();
-        navigate("/allService");
+        navigate("/");
       })
       .catch((error) => {
         setErrorMessage(error.message);
@@ -98,7 +101,9 @@ const Login = () => {
           </label>
         </div>
         <div className="form-control mt-6">
-          <button className="px-8 py-2 rounded-lg bg-[#6D8CA0] text-white font-bold">Login</button>
+          <button className="px-8 py-2 rounded-lg bg-[#6D8CA0] text-white font-bold">
+            Login
+          </button>
         </div>
       </form>
       {errorMessage && (

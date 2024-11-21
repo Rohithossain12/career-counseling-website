@@ -17,6 +17,7 @@ const PasswordReset = () => {
     sendPasswordResetEmail(auth, email)
       .then(() => {
         toast.success("Reset email send. please check your email");
+        window.location="https://mail.google.com/"
       })
       .catch(() => {
         toast.error("Please provide a valid email address");

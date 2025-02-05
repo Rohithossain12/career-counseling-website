@@ -1,4 +1,3 @@
-Here’s a well-structured `README.md` file for your **Quick Career** project:
 
 ---
 
@@ -106,4 +105,3 @@ This project is **MIT Licensed**. See the [LICENSE](LICENSE) file for details.
 
 ---
 
-This `README.md` provides clear documentation with a professional structure. Let me know if you need any modifications! 🚀

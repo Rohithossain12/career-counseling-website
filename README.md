@@ -5,7 +5,10 @@
 ![Quick Career Banner](https://i.ibb.co.com/zWsj7v0Q/iamge1.png)
 ## 🚀 Overview
 
-**Quick Career** is a career counseling web application that helps individuals understand their skills, interests, and career aspirations. It provides guidance on career planning, goal setting, and overcoming challenges to achieve success in the workplace.
+- **Career Assessment**: Helps individuals understand their skills, interests, and career aspirations.
+- **Personalized Guidance**: Provides expert advice on career planning and goal setting.
+- **Challenge Overcoming**: Offers strategies to overcome obstacles in the workplace.
+- **Career Success**: Focuses on achieving success and growth in your professional journey.
 
 ## 📌 Features
 

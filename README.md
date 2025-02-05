@@ -3,7 +3,7 @@ Here’s a well-structured `README.md` file for your **Quick Career** project:
 ---
 
 # Quick Career
-![Quick Career Banner](https://i.ibb.co.com/zWsj7v0Q/iamge1.png)
+<img src="https://i.ibb.co.com/zWsj7v0Q/iamge1.png" alt="Quick Career Banner" loading="lazy" />
 ## 🚀 Overview
 
 **Quick Career** is a career counseling web application that helps individuals understand their skills, interests, and career aspirations. It provides guidance on career planning, goal setting, and overcoming challenges to achieve success in the workplace.
